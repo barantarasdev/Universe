@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { TOP_ALBUM } from 'data';
+import { TOP_ALBUM } from 'src/data';
 import { AuthorT } from 'src/types/app.types';
 
 @Injectable()
