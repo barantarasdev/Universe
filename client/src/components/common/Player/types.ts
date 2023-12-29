@@ -10,7 +10,7 @@ export interface UsePlayerR {
   elapsed: number;
   volume: number;
   music: MusicCardT | null;
-  onChangeTrackProgress: (_: any, value: number | number[]) => void;
-  onChangeTrackVolume: (_: any, value: number | number[]) => void;
+  onChangeTrackProgress: (_: unknown, value: number | number[]) => void;
+  onChangeTrackVolume: (_: unknown, value: number | number[]) => void;
   setIsMute: () => void;
 }

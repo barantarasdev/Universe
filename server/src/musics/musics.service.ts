@@ -3,6 +3,7 @@ import { MUSICS, RECOMMENDED, TOP_CHART } from 'data';
 import * as path from 'path';
 import * as mm from 'music-metadata';
 import { inspect } from 'util';
+import { Response } from 'express';
 import { MusicT, ChartT } from 'src/types/app.types';
 import getConvertedImageToBase64 from 'src/utils/convertImageToBase64';
 import getFormattedTime from 'src/utils/getFormattedTime';
@@ -46,7 +47,7 @@ export class MusicsService {
     return topChart;
   }
 
-  getMusic(musicNumber: number, res: any): string {
+  getMusic(musicNumber: number, res: Response): void {
     const filePath = path.join(process.cwd(), `data/musics/${musicNumber}.mp3`);
 
     return res.sendFile(filePath);
