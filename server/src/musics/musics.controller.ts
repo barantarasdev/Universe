@@ -23,7 +23,7 @@ export class MusicsController {
   }
 
   @Get('/music/:musicId')
-  getMusic(@Param('musicId') musicId: number, @Res() res: Response): string {
+  getMusic(@Param('musicId') musicId: number, @Res() res: Response): void {
     return this.musicsService.getMusic(musicId, res);
   }
 }
