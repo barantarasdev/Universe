@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { MUSICS, RECOMMENDED, TOP_CHART } from 'src/data';
+import { MUSICS, RECOMMENDED, TOP_CHART } from '../../data';
 import * as path from 'path';
 import * as mm from 'music-metadata';
 import { inspect } from 'util';
@@ -24,7 +24,7 @@ export class MusicsService {
           item.musics.map(async (musicItem) => {
             const filePath = path.join(
               process.cwd(),
-              `src/data/musics/${musicItem.musicNumber}.mp3`,
+              `data/musics/${musicItem.musicNumber}.mp3`,
             );
             const metadata = await mm.parseFile(filePath);
             const duration = getFormattedTime(
@@ -48,10 +48,7 @@ export class MusicsService {
   }
 
   getMusic(musicNumber: number, res: Response): void {
-    const filePath = path.join(
-      process.cwd(),
-      `src/data/musics/${musicNumber}.mp3`,
-    );
+    const filePath = path.join(process.cwd(), `data/musics/${musicNumber}.mp3`);
 
     return res.sendFile(filePath);
   }
