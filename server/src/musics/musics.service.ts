@@ -4,9 +4,9 @@ import * as path from 'path';
 import * as mm from 'music-metadata';
 import { inspect } from 'util';
 import { Response } from 'express';
-import { MusicT, ChartT } from 'src/types/app.types';
-import getConvertedImageToBase64 from 'src/utils/convertImageToBase64';
-import getFormattedTime from 'src/utils/getFormattedTime';
+import { MusicT, ChartT } from '../types/app.types';
+import getConvertedImageToBase64 from '../utils/convertImageToBase64';
+import getFormattedTime from '../utils/getFormattedTime';
 
 @Injectable()
 export class MusicsService {

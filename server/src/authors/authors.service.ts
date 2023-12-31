@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { TOP_ALBUM } from 'data';
-import { AuthorT } from 'src/types/app.types';
+import { AuthorT } from '../types/app.types';
 
 @Injectable()
 export class AuthorsService {

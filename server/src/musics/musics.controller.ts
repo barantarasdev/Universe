@@ -1,7 +1,7 @@
 import { Controller, Get, Param, Res } from '@nestjs/common';
 import { Response } from 'express';
 import { MusicsService } from './musics.service';
-import { MusicT, ChartT } from 'src/types/app.types';
+import { MusicT, ChartT } from '../types/app.types';
 
 @Controller()
 export class MusicsController {
