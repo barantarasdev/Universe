@@ -5,9 +5,17 @@ import { MusicsService } from './musics/musics.service';
 import { AuthorsController } from './authors/authors.controller';
 import { AuthorsService } from './authors/authors.service';
 import { AuthorsModule } from './authors/authors.module';
+import { ServeStaticModule } from '@nestjs/serve-static';
+import { join } from 'path';
 
 @Module({
-  imports: [MusicsModule, AuthorsModule],
+  imports: [
+    MusicsModule,
+    AuthorsModule,
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '..', 'data'),
+    }),
+  ],
   controllers: [MusicsController, AuthorsController],
   providers: [MusicsService, AuthorsService],
 })
