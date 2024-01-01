@@ -1,4 +1,4 @@
-import { AuthorT, ChartT, MusicT } from 'src/types/app.types';
+import { AuthorT, ChartT, MusicT } from '../src/types/app.types';
 
 export const MUSICS: MusicT[] = [
   {

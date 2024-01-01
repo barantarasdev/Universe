@@ -10,8 +10,16 @@ import { join } from 'path';
 
 @Module({
   imports: [
-    ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '..', 'client'),
+    ServeStaticModule.forRootAsync({
+      useFactory: () => {
+        const uploadsPath = join(__dirname, '..', 'client');
+        return [
+          {
+            rootPath: uploadsPath,
+            serveRoot: '/client/',
+          },
+        ];
+      },
     }),
     MusicsModule,
     AuthorsModule,

@@ -3,6 +3,19 @@
   "collection": "@nestjs/schematics",
   "sourceRoot": "src",
   "compilerOptions": {
+    "assets": [
+      {
+        "include": "client/images/",
+        "outDir": "dist/client/images",
+        "watchAssets": true
+      },
+      {
+        "include": "client/musics/",
+        "outDir": "dist/client/musics",
+        "watchAssets": true
+      }
+    ],
+    "watchAssets": true,
     "deleteOutDir": true
   }
 }
