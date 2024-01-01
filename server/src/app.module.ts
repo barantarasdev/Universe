@@ -10,11 +10,11 @@ import { join } from 'path';
 
 @Module({
   imports: [
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '..', 'client'),
+    }),
     MusicsModule,
     AuthorsModule,
-    ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '..', 'data'),
-    }),
   ],
   controllers: [MusicsController, AuthorsController],
   providers: [MusicsService, AuthorsService],
