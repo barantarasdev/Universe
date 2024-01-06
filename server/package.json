@@ -18,8 +18,8 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "copy:images": "cp -rv client/images dist/client/images",
-    "copy:musics": "cp -rv client/musics dist/client/musics"
+    "copy:images": "cp -rv public/images dist/public/images",
+    "copy:musics": "cp -rv public/musics dist/public/musics"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",

@@ -5,13 +5,13 @@
   "compilerOptions": {
     "assets": [
       {
-        "include": "client/images/",
-        "outDir": "dist/client/images",
+        "include": "public/images/",
+        "outDir": "dist/public/images",
         "watchAssets": true
       },
       {
-        "include": "client/musics/",
-        "outDir": "dist/client/musics",
+        "include": "public/musics/",
+        "outDir": "dist/public/musics",
         "watchAssets": true
       }
     ],

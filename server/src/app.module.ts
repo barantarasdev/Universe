@@ -12,11 +12,11 @@ import { join } from 'path';
   imports: [
     ServeStaticModule.forRootAsync({
       useFactory: () => {
-        const uploadsPath = join(__dirname, '..', 'client');
+        const uploadsPath = join(__dirname, '..', 'public');
         return [
           {
             rootPath: uploadsPath,
-            serveRoot: '/client/',
+            serveRoot: '/public/',
           },
         ];
       },

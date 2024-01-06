@@ -17,11 +17,6 @@ export class MusicsController {
     return await this.musicsService.getTopChart();
   }
 
-  @Get('/test')
-  async getTest() {
-    return 'Test';
-  }
-
   @Get('/musicCard/:musicId')
   getMusicCard(@Param('musicId') musicId: number): MusicT | undefined {
     return this.musicsService.getMusicCard(musicId);
